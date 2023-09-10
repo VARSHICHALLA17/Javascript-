@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<form onsubmit="return valid()" action="https://www.google.com">
+	<input 
+	type="text" 
+	id="first_name"
+	placeholder="FirstName"/>
+	<p><input 
+	placeholder=" Enter Password" 
+	type="password" 
+	id="password"></p>
+	<p><button onclick="valid()">Submit</button></p>	
+	</form>
+	<script type="text/javascript">
+	function valid()
+	{
+	var firstName=document.getElementById("first_name").value;
+	var password=document.getElementById("password").value;
+	var firstNameCheck=/^[a-zA-Z ]+$/
+	var passwordCheck=/^(?=.*[0-9])(?=.*[A-Z])(?=.[a_z]){6}$/
+	if(!password.match(passwordCheck))
+	{
+		alert("password ,must carry uppercase,lowercase and digits")
+		return false
+	}
+	if(firstName==""||firstName.length<3)
+	{
+		alert("Please provide valid name")
+		return false
+	}
+	if(!firstName.match(firstNameCheck))
+	{
+		alert("Please provide characters only")
+		return false
+	}	
+	return true
+	}
+	</script>
+</body>
+</html>

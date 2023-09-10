@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	// let a=90
+	// console.log(a)
+    // a="javascript"
+	// console.log(a)
+	// console.log("amazon")
+	// console.log("flipkart")
+	// console.log("myntra")
+	// setInterval(()=>{
+	// 	let date=new Date()
+	// 	console.log(date)
+	// 	console.log("Happy Teacher's day")
+	// },1000)
+	// setTimeout(()=>{
+	// 	console.log("amazon")
+	// },2000)//dom
+	// console.log("flipkart")
+	// console.log("myntra")
+	const promiseObj=new Promise((resolve,reject)=>{
+		const time=Math.random()
+		console.log(time)
+		if(time<0.5)
+		return resolve()
+	    else
+	    return reject()
+	})
+	console.log(promiseObj)	
+</script>
+</body>
+</html>

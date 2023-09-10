@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<input id="username"/>
+<p> <input id="name" /></p>
+<p id="display-username"></p>
+<p id="display-name"></p>
+<button onclick="store()">Submit</button>
+<script type="text/javascript">
+	function store()
+	{
+		var username=document.getElementById("username").value
+		var name=document.getElementById("name").value
+		document.getElementById("display-username")
+		.innerHTML=username
+		document.getElementById("display-name")
+		.innerHTML=name
+		console.log(username,name)
+	}
+</script>
+</body>
+
+</html>

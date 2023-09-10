@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<section id="show-employees"></section>
+<script type="text/javascript">
+	fetch("https://reqres.in/api/users?page=2")
+	.then((response)=>{
+		//console.log(response)
+		return response.json()
+	})
+	.then((updatedResponse)=>{
+		//console.log(updatedResponse)
+		displayData(updatedResponse.data)
+	})
+	//showing data on webpage
+	function displayData(employees)
+	{
+		console.log(employees)
+		var showEmployees=document.getElementById("show-employees")
+		for(var emp=0;emp<employees.length;emp++)
+		{
+			showEmployees.innerHTML+=`
+			<div>
+			<p>Name:${employees[emp].first_name}</p>
+			<p>Email:${employees[emp].email}</p>
+			<img src="${employees[emp].avatar}" width="5%"/>
+			</div>
+			`
+		}
+	}
+</script>
+</body>
+</html>
